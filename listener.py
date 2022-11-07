@@ -42,7 +42,7 @@ def add_liquidity():
     
     # The data returned by function 'balanceOf' has small difference with real number because of rounding
     # So I use '< 100' and '- 100' instead of strict equal
-    if usdc_balance < 100 and usdt_balance < 100:
+    if usdc_balance <= 100 and usdt_balance <= 100:
         print("No USDC or USDT!")
         return
     else:
